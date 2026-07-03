@@ -4,343 +4,666 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>🏡 Crémaillère à Angoulême</title>
+<title>Crémaillère à Angoulême</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
 
 <style>
-
 :root{
-    --green:#1C4717;
-    --bordeaux:#751616;
-    --taupe:#A3827A;
-    --cream:#F7F0DF;
-    --cream-light:#FFF9ED;
+  --green:#1C4717;
+  --bordeaux:#751616;
+  --taupe:#A3827A;
+  --cream:#F7F0DF;
+  --cream-light:#FFF9ED;
+  --ink:#241818;
+  --white:#FFFFFF;
 }
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
-    font-family:"DM Sans",sans-serif;
+  font-family:"DM Sans", sans-serif;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 8% 8%, rgba(28,71,23,.20), transparent 28rem),
+    radial-gradient(circle at 88% 12%, rgba(117,22,22,.18), transparent 30rem),
+    linear-gradient(135deg, var(--cream), var(--cream-light));
+  line-height:1.6;
+  overflow-x:hidden;
+}
 
-    background:
-      radial-gradient(circle at 10% 10%, rgba(28,71,23,.15), transparent 30rem),
-      radial-gradient(circle at 90% 20%, rgba(117,22,22,.12), transparent 30rem),
-      linear-gradient(135deg,#F7F0DF,#FFFDF8);
-
-    min-height:100vh;
-    color:#2b2b2b;
+a{
+  color:inherit;
 }
 
 .container{
-    width:min(1150px,92%);
-    margin:auto;
+  width:min(1120px, 92%);
+  margin:auto;
+}
+
+/* NAV */
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:28px 0;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:800;
+  color:var(--bordeaux);
+  font-size:1.05rem;
+}
+
+.logo-mark{
+  width:18px;
+  height:18px;
+  border-radius:999px;
+  background:var(--green);
+  box-shadow:0 0 0 8px rgba(28,71,23,.14);
+}
+
+.menu{
+  display:flex;
+  gap:10px;
+}
+
+.menu a{
+  text-decoration:none;
+  font-weight:800;
+  font-size:.9rem;
+  color:var(--bordeaux);
+  background:rgba(255,255,255,.62);
+  border:1px solid rgba(117,22,22,.12);
+  padding:10px 16px;
+  border-radius:999px;
 }
 
 /* HERO */
 
 .hero{
-
-    min-height:100vh;
-
-    display:grid;
-    grid-template-columns:1fr 1fr;
-
-    gap:60px;
-
-    align-items:center;
-
-    padding:40px 0;
-}
-
-.hero-left{
-
-    max-width:600px;
+  min-height:78vh;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:56px;
+  align-items:center;
+  padding:36px 0 70px;
 }
 
 .badge{
-
-    display:inline-block;
-
-    background:var(--green);
-
-    color:white;
-
-    padding:12px 20px;
-
-    border-radius:999px;
-
-    font-weight:700;
-
-    margin-bottom:25px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:var(--green);
+  color:var(--cream-light);
+  padding:10px 18px;
+  border-radius:999px;
+  font-size:.9rem;
+  font-weight:800;
+  margin-bottom:22px;
+  box-shadow:0 14px 35px rgba(28,71,23,.22);
 }
 
-h1{
-
-    font-size:clamp(4rem,8vw,7rem);
-
-    line-height:.85;
-
-    color:var(--bordeaux);
-
-    letter-spacing:-.08em;
-
-    margin-bottom:30px;
+.hero h1{
+  color:var(--bordeaux);
+  font-size:clamp(3.4rem, 8vw, 7rem);
+  line-height:.86;
+  letter-spacing:-.075em;
+  margin-bottom:26px;
 }
 
-.hero-text{
-
-    font-size:1.25rem;
-
-    line-height:1.8;
-
-    color:#5E4A4A;
-
-    margin-bottom:35px;
+.hero p{
+  max-width:640px;
+  color:#5D4949;
+  font-size:clamp(1.05rem, 2vw, 1.25rem);
+  margin-bottom:32px;
 }
 
-/* PHOTOS */
+.actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:54px;
+  padding:16px 26px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:800;
+  transition:.25s ease;
+}
+
+.btn-primary{
+  background:var(--bordeaux);
+  color:white;
+  box-shadow:0 18px 38px rgba(117,22,22,.24);
+}
+
+.btn-secondary{
+  background:rgba(255,255,255,.72);
+  color:var(--bordeaux);
+  border:1px solid rgba(117,22,22,.15);
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+}
+
+/* PHOTO STACK */
 
 .photo-stack{
-
-    position:relative;
-
-    height:650px;
-}
-
-.blob1{
-    position:absolute;
-    width:260px;
-    height:260px;
-    background:var(--green);
-    border-radius:50%;
-    top:-20px;
-    right:-30px;
-    opacity:.9;
-}
-
-.blob2{
-    position:absolute;
-    width:220px;
-    height:220px;
-    background:var(--taupe);
-    border-radius:50%;
-    bottom:50px;
-    left:-30px;
-    opacity:.85;
+  position:relative;
+  min-height:560px;
 }
 
 .polaroid{
-
-    position:absolute;
-
-    background:white;
-
-    padding:14px 14px 50px;
-
-    border-radius:22px;
-
-    box-shadow:
-      0 25px 60px rgba(0,0,0,.15);
+  position:absolute;
+  background:white;
+  padding:14px 14px 52px;
+  border-radius:24px;
+  box-shadow:0 24px 60px rgba(117,22,22,.18);
 }
 
 .polaroid img{
-
-    width:100%;
-    height:100%;
-    object-fit:cover;
-
-    border-radius:12px;
-
-    display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  border-radius:17px;
 }
 
-.photo1{
-
-    width:72%;
-    height:420px;
-
-    right:0;
-    top:0;
-
-    transform:rotate(4deg);
+.polaroid::after{
+  content:attr(data-caption);
+  position:absolute;
+  left:20px;
+  bottom:17px;
+  color:var(--bordeaux);
+  font-weight:800;
+  font-size:.95rem;
 }
 
-.photo2{
-
-    width:55%;
-    height:310px;
-
-    left:0;
-    bottom:80px;
-
-    transform:rotate(-7deg);
+.photo-one{
+  width:75%;
+  height:390px;
+  right:0;
+  top:18px;
+  transform:rotate(4deg);
+  background:var(--cream-light);
 }
 
-.photo3{
-
-    width:42%;
-    height:220px;
-
-    right:10px;
-    bottom:0;
-
-    transform:rotate(8deg);
+.photo-two{
+  width:56%;
+  height:300px;
+  left:0;
+  bottom:38px;
+  transform:rotate(-7deg);
 }
 
-/* INVITATION */
-
-.invitation{
-
-    padding-bottom:120px;
+.photo-three{
+  width:45%;
+  height:230px;
+  right:16px;
+  bottom:0;
+  transform:rotate(9deg);
+  background:#fff;
 }
 
-.invite-card{
-
-    max-width:850px;
-
-    margin:auto;
-
-    background:rgba(255,255,255,.75);
-
-    backdrop-filter:blur(10px);
-
-    border-radius:40px;
-
-    padding:60px 40px;
-
-    text-align:center;
-
-    box-shadow:
-      0 25px 60px rgba(117,22,22,.08);
+.blob{
+  position:absolute;
+  border-radius:40% 60% 65% 35% / 45% 42% 58% 55%;
+  z-index:-1;
 }
 
-.invite-card p{
-
-    font-size:1.3rem;
-
-    line-height:1.9;
-
-    color:#5E4A4A;
-
-    margin-bottom:35px;
+.blob-green{
+  width:260px;
+  height:260px;
+  background:var(--green);
+  right:-50px;
+  top:-30px;
+  opacity:.95;
 }
 
-.button{
-
-    display:inline-block;
-
-    background:var(--bordeaux);
-
-    color:white;
-
-    text-decoration:none;
-
-    padding:18px 34px;
-
-    border-radius:999px;
-
-    font-weight:800;
-
-    font-size:1rem;
-
-    box-shadow:
-      0 20px 40px rgba(117,22,22,.25);
+.blob-taupe{
+  width:220px;
+  height:220px;
+  background:var(--taupe);
+  left:-45px;
+  bottom:40px;
+  opacity:.85;
 }
 
-.note{
+/* INTRO STRIP */
 
-    display:block;
-
-    margin-top:25px;
-
-    color:#8A7676;
-
-    font-size:.95rem;
+.memory-strip{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:14px;
+  margin-top:-22px;
+  position:relative;
+  z-index:2;
 }
+
+.memory-item{
+  background:rgba(255,255,255,.78);
+  border:1px solid rgba(117,22,22,.10);
+  border-radius:26px;
+  padding:22px;
+  text-align:center;
+  box-shadow:0 18px 45px rgba(117,22,22,.08);
+}
+
+.memory-item strong{
+  display:block;
+  color:var(--bordeaux);
+  font-size:1.7rem;
+  line-height:1;
+  margin-bottom:8px;
+}
+
+.memory-item span{
+  color:#6A5555;
+  font-size:.95rem;
+}
+
+/* STORY */
+
+.section{
+  padding:82px 0;
+}
+
+.story-card{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:34px;
+  align-items:stretch;
+}
+
+.story-title{
+  background:var(--bordeaux);
+  color:white;
+  border-radius:38px;
+  padding:48px;
+  position:relative;
+  overflow:hidden;
+}
+
+.story-title::after{
+  content:"";
+  position:absolute;
+  width:190px;
+  height:190px;
+  right:-70px;
+  bottom:-70px;
+  background:var(--green);
+  border-radius:48% 52% 62% 38%;
+  opacity:.9;
+}
+
+.story-title h2{
+  position:relative;
+  z-index:1;
+  font-size:clamp(2.4rem, 5vw, 4.5rem);
+  line-height:.92;
+  letter-spacing:-.055em;
+}
+
+.story-text{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background:rgba(255,255,255,.78);
+  border:1px solid rgba(117,22,22,.10);
+  border-radius:38px;
+  padding:48px;
+  box-shadow:0 22px 60px rgba(117,22,22,.09);
+}
+
+.story-text p{
+  color:#5D4949;
+  font-size:1.12rem;
+  margin-bottom:18px;
+}
+
+.story-text p:last-child{
+  margin-bottom:0;
+}
+
+/* QUOTE */
+
+.quote{
+  text-align:center;
+  padding:54px 24px;
+}
+
+.quote p{
+  max-width:900px;
+  margin:auto;
+  color:var(--bordeaux);
+  font-size:clamp(2.2rem, 6vw, 5rem);
+  line-height:.95;
+  letter-spacing:-.06em;
+  font-weight:800;
+}
+
+.quote span{
+  display:block;
+  margin-top:18px;
+  color:#6A5555;
+  font-size:1.05rem;
+  letter-spacing:0;
+  font-weight:500;
+}
+
+/* MOOD */
+
+.mood{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+  align-items:center;
+}
+
+.mood-text{
+  padding:18px 0;
+}
+
+.mood-text h2{
+  color:var(--bordeaux);
+  font-size:clamp(2.4rem, 5vw, 4.6rem);
+  line-height:.92;
+  letter-spacing:-.055em;
+  margin-bottom:22px;
+}
+
+.mood-text p{
+  color:#5D4949;
+  font-size:1.1rem;
+  max-width:560px;
+}
+
+.mood-cloud{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  justify-content:center;
+}
+
+.chip{
+  background:white;
+  color:var(--bordeaux);
+  border:1px solid rgba(117,22,22,.10);
+  border-radius:999px;
+  padding:14px 18px;
+  font-weight:800;
+  box-shadow:0 14px 36px rgba(117,22,22,.08);
+}
+
+.chip:nth-child(2n){
+  background:var(--green);
+  color:white;
+}
+
+.chip:nth-child(3n){
+  background:var(--taupe);
+  color:white;
+}
+
+/* RESPONSE */
+
+.response{
+  position:relative;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,.16), transparent 14rem),
+    linear-gradient(135deg, var(--green), #2F6727);
+  color:white;
+  border-radius:42px;
+  padding:64px 42px;
+  text-align:center;
+  overflow:hidden;
+  box-shadow:0 30px 80px rgba(28,71,23,.24);
+}
+
+.response::before,
+.response::after{
+  content:"";
+  position:absolute;
+  border-radius:50%;
+  background:rgba(255,255,255,.10);
+}
+
+.response::before{
+  width:200px;
+  height:200px;
+  top:-80px;
+  left:-60px;
+}
+
+.response::after{
+  width:260px;
+  height:260px;
+  right:-100px;
+  bottom:-100px;
+}
+
+.response-content{
+  position:relative;
+  z-index:1;
+}
+
+.response h2{
+  font-size:clamp(2.5rem, 7vw, 5rem);
+  line-height:.9;
+  letter-spacing:-.065em;
+  margin-bottom:20px;
+}
+
+.response p{
+  max-width:690px;
+  margin:0 auto 32px;
+  color:rgba(255,255,255,.86);
+  font-size:1.1rem;
+}
+
+.response .btn{
+  background:var(--cream-light);
+  color:var(--bordeaux);
+}
+
+/* FOOTER */
 
 footer{
+  padding:56px 20px;
+  text-align:center;
+  color:#6A5555;
+}
 
+footer strong{
+  display:block;
+  color:var(--bordeaux);
+  font-size:1.25rem;
+  margin-bottom:6px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:980px){
+
+  .hero{
+    grid-template-columns:1fr;
     text-align:center;
+    min-height:auto;
+    gap:42px;
+  }
 
-    padding:60px 20px;
+  .hero p{
+    margin-left:auto;
+    margin-right:auto;
+  }
 
-    color:#8A7676;
+  .actions{
+    justify-content:center;
+  }
+
+  .photo-stack{
+    min-height:520px;
+  }
+
+  .memory-strip{
+    grid-template-columns:repeat(2, 1fr);
+    margin-top:0;
+  }
+
+  .story-card,
+  .mood{
+    grid-template-columns:1fr;
+  }
+
+  .mood-text{
+    text-align:center;
+  }
+
+  .mood-text p{
+    margin:auto;
+  }
 }
 
-/* TABLETTE */
+@media(max-width:700px){
 
-@media(max-width:950px){
+  .container{
+    width:min(100% - 24px, 1120px);
+  }
 
-    .hero{
-        grid-template-columns:1fr;
-        text-align:center;
-        min-height:auto;
-    }
+  nav{
+    justify-content:center;
+    padding:22px 0;
+  }
 
-    .hero-left{
-        margin:auto;
-    }
+  .menu{
+    display:none;
+  }
 
-    .photo-stack{
-        height:550px;
-        max-width:650px;
-        margin:auto;
-    }
+  .logo{
+    font-size:1rem;
+  }
 
+  .hero{
+    padding:24px 0 50px;
+  }
+
+  .hero h1{
+    font-size:clamp(3.2rem, 17vw, 4.8rem);
+  }
+
+  .actions{
+    width:100%;
+  }
+
+  .btn{
+    width:100%;
+  }
+
+  .photo-stack{
+    min-height:430px;
+  }
+
+  .photo-one{
+    width:78%;
+    height:300px;
+  }
+
+  .photo-two{
+    width:62%;
+    height:230px;
+    bottom:44px;
+  }
+
+  .photo-three{
+    width:48%;
+    height:185px;
+  }
+
+  .memory-strip{
+    grid-template-columns:1fr;
+  }
+
+  .section{
+    padding:58px 0;
+  }
+
+  .story-title,
+  .story-text,
+  .response{
+    border-radius:28px;
+    padding:32px 26px;
+  }
+
+  .quote{
+    padding:34px 10px;
+  }
+
+  .mood-cloud{
+    justify-content:flex-start;
+  }
+
+  .chip{
+    width:100%;
+    text-align:center;
+  }
 }
 
-/* MOBILE */
+@media(max-width:430px){
 
-@media(max-width:650px){
+  .badge{
+    font-size:.78rem;
+    padding:9px 14px;
+  }
 
-    h1{
-        font-size:4rem;
-    }
+  .hero p{
+    font-size:1rem;
+  }
 
-    .hero-text{
-        font-size:1rem;
-    }
+  .photo-stack{
+    min-height:380px;
+  }
 
-    .photo-stack{
-        height:380px;
-    }
+  .photo-one{
+    height:260px;
+  }
 
-    .photo1{
-        height:240px;
-    }
+  .photo-two{
+    height:205px;
+  }
 
-    .photo2{
-        height:180px;
-    }
+  .photo-three{
+    height:160px;
+  }
 
-    .photo3{
-        height:130px;
-    }
+  .memory-item{
+    padding:20px;
+  }
 
-    .invite-card{
-
-        padding:35px 25px;
-
-        border-radius:28px;
-    }
-
-    .invite-card p{
-
-        font-size:1.05rem;
-    }
-
-    .button{
-        width:100%;
-    }
+  .response{
+    padding:34px 22px;
+  }
 }
-
 </style>
 </head>
 
@@ -348,79 +671,103 @@ footer{
 
 <div class="container">
 
-<section class="hero">
+  <nav>
+    <div class="logo">
+      <span class="logo-mark"></span>
+      Crémaillère à Angoulême
+    </div>
 
-<div class="hero-left">
+    <div class="menu">
+      <a href="#histoire">L’histoire</a>
+      <a href="#ambiance">L’ambiance</a>
+      <a href="#reponse">Répondre</a>
+    </div>
+  </nav>
 
-<div class="badge">
-✨ Samedi 5 septembre 2026
-</div>
+  <main>
 
-<h1>
-On pend la crémaillère.
-</h1>
+    <section class="hero">
 
-<p class="hero-text">
+      <div class="hero-text">
 
-Après des mois de cartons, de travaux, de meubles à monter et de projets,
-nous avons enfin trouvé notre chez-nous.
+        <div class="badge">
+          ✨ Samedi 5 septembre 2026
+        </div>
 
-<br><br>
+        <h1>
+          On ouvre enfin la maison.
+        </h1>
 
-Et pour fêter ça, nous aimerions partager ce moment avec vous.
+        <p>
+          Après les cartons, les travaux, les allers-retours et les cafés bus debout,
+          il ne manque plus qu’une chose pour que cette maison devienne vraiment la nôtre :
+          la remplir des gens qu’on aime.
+        </p>
 
-</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="TON_LIEN_GOOGLE_FORM" target="_blank" rel="noopener">
+            Je réponds à l’invitation
+          </a>
 
-</div>
+          <a class="btn btn-secondary" href="#histoire">
+            Découvrir l’invitation
+          </a>
+        </div>
 
-<div class="photo-stack">
+      </div>
 
-<div class="blob1"></div>
-<div class="blob2"></div>
+      <div class="photo-stack" aria-label="Photos d'ambiance de la maison">
 
-<div class="polaroid photo1">
-<img src="images/maison.jpg" alt="">
-</div>
+        <div class="blob blob-green"></div>
+        <div class="blob blob-taupe"></div>
 
-<div class="polaroid photo2">
-<img src="images/jardin.jpg" alt="">
-</div>
+        <div class="polaroid photo-one" data-caption="la maison">
+          <img src="images/jardin.jpg" alt="Jardin de la maison">
+        </div>
 
-<div class="polaroid photo3">
-<img src="images/apero.jpg" alt="">
-</div>
+        <div class="polaroid photo-two" data-caption="le jardin">
+          <img src="images/jardin.jpg" alt="Ambiance jardin">
+        </div>
 
-</div>
+        <div class="polaroid photo-three" data-caption="la fête">
+          <img src="images/jardin.jpg" alt="Ambiance crémaillère">
+        </div>
 
-</section>
+      </div>
 
-<section class="invitation">
+    </section>
 
-<div class="invite-card">
+    <section class="memory-strip" aria-label="Résumé de l'esprit de la journée">
 
-<p>
+      <div class="memory-item">
+        <strong>1</strong>
+        <span>maison à inaugurer</span>
+      </div>
 
-Nous serions ravis de vous accueillir à Angoulême pour partager une belle journée,
-profiter du jardin, découvrir la maison et célébrer ensemble cette nouvelle aventure.
+      <div class="memory-item">
+        <strong>∞</strong>
+        <span>verres à lever</span>
+      </div>
 
-</p>
+      <div class="memory-item">
+        <strong>12h</strong>
+        <span>début des festivités</span>
+      </div>
 
-<a class="button" href="TON_LIEN_GOOGLE_FORM" target="_blank">
-Répondre à l'invitation
-</a>
+      <div class="memory-item">
+        <strong>31/07</strong>
+        <span>réponse souhaitée</span>
+      </div>
 
-<span class="note">
-Réponse souhaitée avant le 31 juillet
-</span>
+    </section>
 
-</div>
-
-</section>
+  </main>
 
 </div>
 
 <footer>
-❤️ Hâte de vous retrouver
+  <strong>Hâte de vous voir à Angoulême ❤️</strong>
+  <p>Crémaillère · Samedi 5 septembre 2026</p>
 </footer>
 
 </body>
