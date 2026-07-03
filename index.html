@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Crémaillère à Angoulême — 5 septembre 2026</title>
+<title>Crémaillère à Angoulême</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,586 +12,657 @@
 
 <style>
 :root{
-    --green:#1C4717;
-    --bordeaux:#751616;
-    --taupe:#A3827A;
-    --cream:#F7F0DF;
-    --cream-light:#FFF9EE;
-    --ink:#2A1D1D;
-    --white:#FFFFFF;
+  --green:#1C4717;
+  --bordeaux:#751616;
+  --taupe:#A3827A;
+  --cream:#F7F0DF;
+  --cream-light:#FFF9ED;
+  --ink:#241818;
+  --white:#FFFFFF;
 }
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 html{
-    scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 
 body{
-    font-family:"DM Sans", sans-serif;
-    background:
-        radial-gradient(circle at 10% 10%, rgba(28,71,23,.20), transparent 28rem),
-        radial-gradient(circle at 90% 20%, rgba(117,22,22,.18), transparent 30rem),
-        linear-gradient(135deg, var(--cream), var(--cream-light));
-    color:var(--ink);
-    line-height:1.6;
-    overflow-x:hidden;
+  font-family:"DM Sans", sans-serif;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 8% 8%, rgba(28,71,23,.20), transparent 28rem),
+    radial-gradient(circle at 88% 12%, rgba(117,22,22,.18), transparent 30rem),
+    linear-gradient(135deg, var(--cream), var(--cream-light));
+  line-height:1.6;
+  overflow-x:hidden;
 }
 
 a{
-    color:inherit;
+  color:inherit;
 }
 
 .container{
-    width:min(1120px, 92%);
-    margin:auto;
+  width:min(1120px, 92%);
+  margin:auto;
 }
 
-/* ---------- NAV ---------- */
+/* NAV */
 
 nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:28px 0;
-    position:relative;
-    z-index:3;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:28px 0;
 }
 
 .logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    font-size:1.1rem;
-    font-weight:800;
-    color:var(--bordeaux);
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:800;
+  color:var(--bordeaux);
+  font-size:1.05rem;
 }
 
-.logo-dot{
-    width:18px;
-    height:18px;
-    border-radius:50%;
-    background:var(--green);
-    box-shadow:0 0 0 8px rgba(28,71,23,.15);
+.logo-mark{
+  width:18px;
+  height:18px;
+  border-radius:999px;
+  background:var(--green);
+  box-shadow:0 0 0 8px rgba(28,71,23,.14);
 }
 
 .menu{
-    display:flex;
-    gap:12px;
+  display:flex;
+  gap:10px;
 }
 
 .menu a{
-    text-decoration:none;
-    color:var(--bordeaux);
-    background:rgba(255,255,255,.55);
-    border:1px solid rgba(117,22,22,.12);
-    padding:10px 16px;
-    border-radius:999px;
-    font-weight:800;
-    font-size:.9rem;
+  text-decoration:none;
+  font-weight:800;
+  font-size:.9rem;
+  color:var(--bordeaux);
+  background:rgba(255,255,255,.62);
+  border:1px solid rgba(117,22,22,.12);
+  padding:10px 16px;
+  border-radius:999px;
 }
 
-/* ---------- HERO ---------- */
+/* HERO */
 
 .hero{
-    min-height:78vh;
-    display:grid;
-    grid-template-columns:1.05fr .95fr;
-    gap:52px;
-    align-items:center;
-    padding:40px 0 70px;
+  min-height:78vh;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:56px;
+  align-items:center;
+  padding:36px 0 70px;
 }
 
 .badge{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    background:var(--green);
-    color:var(--cream-light);
-    padding:10px 18px;
-    border-radius:999px;
-    font-size:.9rem;
-    font-weight:800;
-    margin-bottom:22px;
-    box-shadow:0 12px 30px rgba(28,71,23,.22);
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:var(--green);
+  color:var(--cream-light);
+  padding:10px 18px;
+  border-radius:999px;
+  font-size:.9rem;
+  font-weight:800;
+  margin-bottom:22px;
+  box-shadow:0 14px 35px rgba(28,71,23,.22);
 }
 
 .hero h1{
-    color:var(--bordeaux);
-    font-size:clamp(3.4rem, 8vw, 6.8rem);
-    line-height:.88;
-    letter-spacing:-.07em;
-    margin-bottom:24px;
+  color:var(--bordeaux);
+  font-size:clamp(3.4rem, 8vw, 7rem);
+  line-height:.86;
+  letter-spacing:-.075em;
+  margin-bottom:26px;
 }
 
 .hero p{
-    max-width:650px;
-    color:#5E4A4A;
-    font-size:clamp(1.05rem, 2vw, 1.25rem);
-    margin-bottom:30px;
+  max-width:640px;
+  color:#5D4949;
+  font-size:clamp(1.05rem, 2vw, 1.25rem);
+  margin-bottom:32px;
 }
 
 .actions{
-    display:flex;
-    gap:14px;
-    flex-wrap:wrap;
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
 }
 
 .btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    min-height:52px;
-    padding:15px 24px;
-    border-radius:999px;
-    text-decoration:none;
-    font-weight:800;
-    transition:.25s ease;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:54px;
+  padding:16px 26px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:800;
+  transition:.25s ease;
 }
 
 .btn-primary{
-    background:var(--bordeaux);
-    color:white;
-    box-shadow:0 18px 35px rgba(117,22,22,.22);
+  background:var(--bordeaux);
+  color:white;
+  box-shadow:0 18px 38px rgba(117,22,22,.24);
 }
 
 .btn-secondary{
-    background:rgba(255,255,255,.75);
-    color:var(--bordeaux);
-    border:1px solid rgba(117,22,22,.16);
+  background:rgba(255,255,255,.72);
+  color:var(--bordeaux);
+  border:1px solid rgba(117,22,22,.15);
 }
 
 .btn:hover{
-    transform:translateY(-3px);
+  transform:translateY(-3px);
 }
 
-/* ---------- ORIGINAL VISUAL ---------- */
+/* PHOTO STACK */
 
-.visual{
-    position:relative;
-    min-height:560px;
-    border-radius:44px;
-    background:
-        linear-gradient(to bottom, rgba(0,0,0,.02), rgba(117,22,22,.55)),
-        url("images/jardin.jpg") center/cover no-repeat;
-    box-shadow:0 30px 80px rgba(117,22,22,.18);
-    overflow:hidden;
-    isolation:isolate;
+.photo-stack{
+  position:relative;
+  min-height:560px;
 }
 
-.visual::before{
-    content:"";
-    position:absolute;
-    width:280px;
-    height:280px;
-    right:-80px;
-    top:-80px;
-    background:var(--green);
-    border-radius:43% 57% 50% 50% / 55% 40% 60% 45%;
-    opacity:.95;
-    z-index:-1;
+.polaroid{
+  position:absolute;
+  background:white;
+  padding:14px 14px 52px;
+  border-radius:24px;
+  box-shadow:0 24px 60px rgba(117,22,22,.18);
 }
 
-.visual::after{
-    content:"";
-    position:absolute;
-    width:210px;
-    height:210px;
-    left:-70px;
-    bottom:-70px;
-    background:var(--taupe);
-    border-radius:58% 42% 40% 60% / 48% 62% 38% 52%;
-    opacity:.88;
-    z-index:-1;
+.polaroid img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  border-radius:17px;
 }
 
-.date-card{
-    position:absolute;
-    top:26px;
-    left:26px;
-    background:rgba(255,249,238,.88);
-    backdrop-filter:blur(12px);
-    border-radius:26px;
-    padding:20px 22px;
-    color:var(--bordeaux);
-    box-shadow:0 20px 45px rgba(0,0,0,.12);
+.polaroid::after{
+  content:attr(data-caption);
+  position:absolute;
+  left:20px;
+  bottom:17px;
+  color:var(--bordeaux);
+  font-weight:800;
+  font-size:.95rem;
 }
 
-.date-card span{
-    display:block;
-    font-size:.85rem;
-    font-weight:800;
-    text-transform:uppercase;
-    letter-spacing:.08em;
+.photo-one{
+  width:75%;
+  height:390px;
+  right:0;
+  top:18px;
+  transform:rotate(4deg);
+  background:var(--cream-light);
 }
 
-.date-card strong{
-    display:block;
-    font-size:2.4rem;
-    line-height:1;
+.photo-two{
+  width:56%;
+  height:300px;
+  left:0;
+  bottom:38px;
+  transform:rotate(-7deg);
 }
 
-.house-card{
-    position:absolute;
-    right:24px;
-    bottom:24px;
-    left:24px;
-    background:rgba(117,22,22,.78);
-    color:var(--cream-light);
-    border:1px solid rgba(255,255,255,.22);
-    border-radius:28px;
-    padding:24px;
-    backdrop-filter:blur(12px);
+.photo-three{
+  width:45%;
+  height:230px;
+  right:16px;
+  bottom:0;
+  transform:rotate(9deg);
+  background:#fff;
 }
 
-.house-card strong{
-    display:block;
-    font-size:1.4rem;
-    margin-bottom:6px;
+.blob{
+  position:absolute;
+  border-radius:40% 60% 65% 35% / 45% 42% 58% 55%;
+  z-index:-1;
 }
 
-.house-card p{
-    color:rgba(255,249,238,.88);
-    margin:0;
-    font-size:1rem;
+.blob-green{
+  width:260px;
+  height:260px;
+  background:var(--green);
+  right:-50px;
+  top:-30px;
+  opacity:.95;
 }
 
-/* ---------- FLOATING INFO ---------- */
-
-.quick-info{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:18px;
-    margin-top:-25px;
-    position:relative;
-    z-index:2;
+.blob-taupe{
+  width:220px;
+  height:220px;
+  background:var(--taupe);
+  left:-45px;
+  bottom:40px;
+  opacity:.85;
 }
 
-.info-pill{
-    background:rgba(255,255,255,.78);
-    border:1px solid rgba(117,22,22,.10);
-    border-radius:26px;
-    padding:22px;
-    box-shadow:0 20px 50px rgba(117,22,22,.08);
-    text-align:center;
+/* INTRO STRIP */
+
+.memory-strip{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:14px;
+  margin-top:-22px;
+  position:relative;
+  z-index:2;
 }
 
-.info-pill .emoji{
-    font-size:2rem;
-    margin-bottom:8px;
+.memory-item{
+  background:rgba(255,255,255,.78);
+  border:1px solid rgba(117,22,22,.10);
+  border-radius:26px;
+  padding:22px;
+  text-align:center;
+  box-shadow:0 18px 45px rgba(117,22,22,.08);
 }
 
-.info-pill strong{
-    color:var(--bordeaux);
-    display:block;
-    font-size:1.1rem;
-    margin-bottom:4px;
+.memory-item strong{
+  display:block;
+  color:var(--bordeaux);
+  font-size:1.7rem;
+  line-height:1;
+  margin-bottom:8px;
 }
 
-.info-pill span{
-    color:#6C5555;
-    font-size:.95rem;
+.memory-item span{
+  color:#6A5555;
+  font-size:.95rem;
 }
 
-/* ---------- SECTIONS ---------- */
+/* STORY */
 
 .section{
-    padding:78px 0;
+  padding:82px 0;
 }
 
-.section-title{
-    color:var(--bordeaux);
-    text-align:center;
-    font-size:clamp(2.2rem, 5vw, 4rem);
-    line-height:.95;
-    letter-spacing:-.045em;
-    margin-bottom:38px;
+.story-card{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:34px;
+  align-items:stretch;
 }
 
-.invite-card{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:28px;
-    align-items:stretch;
+.story-title{
+  background:var(--bordeaux);
+  color:white;
+  border-radius:38px;
+  padding:48px;
+  position:relative;
+  overflow:hidden;
 }
 
-.story{
-    background:var(--bordeaux);
-    color:white;
-    border-radius:34px;
-    padding:42px;
-    position:relative;
-    overflow:hidden;
+.story-title::after{
+  content:"";
+  position:absolute;
+  width:190px;
+  height:190px;
+  right:-70px;
+  bottom:-70px;
+  background:var(--green);
+  border-radius:48% 52% 62% 38%;
+  opacity:.9;
 }
 
-.story::after{
-    content:"";
-    position:absolute;
-    width:180px;
-    height:180px;
-    right:-60px;
-    bottom:-60px;
-    background:var(--green);
-    border-radius:45% 55% 60% 40%;
-    opacity:.75;
+.story-title h2{
+  position:relative;
+  z-index:1;
+  font-size:clamp(2.4rem, 5vw, 4.5rem);
+  line-height:.92;
+  letter-spacing:-.055em;
 }
 
-.story h2{
-    font-size:clamp(2rem,4vw,3.2rem);
-    line-height:1;
-    margin-bottom:20px;
-    position:relative;
-    z-index:1;
+.story-text{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background:rgba(255,255,255,.78);
+  border:1px solid rgba(117,22,22,.10);
+  border-radius:38px;
+  padding:48px;
+  box-shadow:0 22px 60px rgba(117,22,22,.09);
 }
 
-.story p{
-    color:rgba(255,255,255,.84);
-    position:relative;
-    z-index:1;
+.story-text p{
+  color:#5D4949;
+  font-size:1.12rem;
+  margin-bottom:18px;
 }
 
-.details{
-    display:grid;
-    gap:18px;
+.story-text p:last-child{
+  margin-bottom:0;
 }
 
-.detail-box{
-    background:rgba(255,255,255,.80);
-    border:1px solid rgba(117,22,22,.10);
-    border-radius:28px;
-    padding:28px;
-    box-shadow:0 18px 45px rgba(117,22,22,.08);
+/* QUOTE */
+
+.quote{
+  text-align:center;
+  padding:54px 24px;
 }
 
-.detail-box h3{
-    color:var(--bordeaux);
-    font-size:1.25rem;
-    margin-bottom:8px;
+.quote p{
+  max-width:900px;
+  margin:auto;
+  color:var(--bordeaux);
+  font-size:clamp(2.2rem, 6vw, 5rem);
+  line-height:.95;
+  letter-spacing:-.06em;
+  font-weight:800;
 }
 
-.detail-box p{
-    color:#5E4A4A;
+.quote span{
+  display:block;
+  margin-top:18px;
+  color:#6A5555;
+  font-size:1.05rem;
+  letter-spacing:0;
+  font-weight:500;
 }
 
-/* ---------- RESPONSE ---------- */
+/* MOOD */
+
+.mood{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+  align-items:center;
+}
+
+.mood-text{
+  padding:18px 0;
+}
+
+.mood-text h2{
+  color:var(--bordeaux);
+  font-size:clamp(2.4rem, 5vw, 4.6rem);
+  line-height:.92;
+  letter-spacing:-.055em;
+  margin-bottom:22px;
+}
+
+.mood-text p{
+  color:#5D4949;
+  font-size:1.1rem;
+  max-width:560px;
+}
+
+.mood-cloud{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  justify-content:center;
+}
+
+.chip{
+  background:white;
+  color:var(--bordeaux);
+  border:1px solid rgba(117,22,22,.10);
+  border-radius:999px;
+  padding:14px 18px;
+  font-weight:800;
+  box-shadow:0 14px 36px rgba(117,22,22,.08);
+}
+
+.chip:nth-child(2n){
+  background:var(--green);
+  color:white;
+}
+
+.chip:nth-child(3n){
+  background:var(--taupe);
+  color:white;
+}
+
+/* RESPONSE */
 
 .response{
-    position:relative;
-    background:
-        linear-gradient(135deg, var(--green), #2F6727);
-    border-radius:40px;
-    padding:58px;
-    color:white;
-    text-align:center;
-    overflow:hidden;
-    box-shadow:0 28px 70px rgba(28,71,23,.22);
+  position:relative;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,.16), transparent 14rem),
+    linear-gradient(135deg, var(--green), #2F6727);
+  color:white;
+  border-radius:42px;
+  padding:64px 42px;
+  text-align:center;
+  overflow:hidden;
+  box-shadow:0 30px 80px rgba(28,71,23,.24);
 }
 
 .response::before,
 .response::after{
-    content:"";
-    position:absolute;
-    border-radius:50%;
-    background:rgba(255,255,255,.12);
+  content:"";
+  position:absolute;
+  border-radius:50%;
+  background:rgba(255,255,255,.10);
 }
 
 .response::before{
-    width:180px;
-    height:180px;
-    top:-70px;
-    left:-50px;
+  width:200px;
+  height:200px;
+  top:-80px;
+  left:-60px;
 }
 
 .response::after{
-    width:240px;
-    height:240px;
-    right:-90px;
-    bottom:-90px;
+  width:260px;
+  height:260px;
+  right:-100px;
+  bottom:-100px;
 }
 
 .response-content{
-    position:relative;
-    z-index:1;
+  position:relative;
+  z-index:1;
 }
 
 .response h2{
-    font-size:clamp(2.2rem, 6vw, 4.2rem);
-    line-height:.95;
-    letter-spacing:-.045em;
-    margin-bottom:18px;
+  font-size:clamp(2.5rem, 7vw, 5rem);
+  line-height:.9;
+  letter-spacing:-.065em;
+  margin-bottom:20px;
 }
 
 .response p{
-    max-width:650px;
-    margin:0 auto 30px;
-    color:rgba(255,255,255,.86);
-    font-size:1.1rem;
+  max-width:690px;
+  margin:0 auto 32px;
+  color:rgba(255,255,255,.86);
+  font-size:1.1rem;
 }
 
 .response .btn{
-    background:var(--cream-light);
-    color:var(--bordeaux);
+  background:var(--cream-light);
+  color:var(--bordeaux);
 }
 
-/* ---------- FOOTER ---------- */
+/* FOOTER */
 
 footer{
-    padding:55px 20px;
-    text-align:center;
-    color:#6C5555;
+  padding:56px 20px;
+  text-align:center;
+  color:#6A5555;
 }
 
 footer strong{
-    display:block;
-    color:var(--bordeaux);
-    font-size:1.3rem;
-    margin-bottom:6px;
+  display:block;
+  color:var(--bordeaux);
+  font-size:1.25rem;
+  margin-bottom:6px;
 }
 
-/* ---------- RESPONSIVE ---------- */
+/* RESPONSIVE */
 
 @media(max-width:980px){
 
-    .hero{
-        grid-template-columns:1fr;
-        text-align:center;
-        min-height:auto;
-        padding-top:20px;
-    }
+  .hero{
+    grid-template-columns:1fr;
+    text-align:center;
+    min-height:auto;
+    gap:42px;
+  }
 
-    .hero p{
-        margin-left:auto;
-        margin-right:auto;
-    }
+  .hero p{
+    margin-left:auto;
+    margin-right:auto;
+  }
 
-    .actions{
-        justify-content:center;
-    }
+  .actions{
+    justify-content:center;
+  }
 
-    .visual{
-        min-height:460px;
-    }
+  .photo-stack{
+    min-height:520px;
+  }
 
-    .quick-info{
-        grid-template-columns:1fr;
-        margin-top:0;
-    }
+  .memory-strip{
+    grid-template-columns:repeat(2, 1fr);
+    margin-top:0;
+  }
 
-    .invite-card{
-        grid-template-columns:1fr;
-    }
+  .story-card,
+  .mood{
+    grid-template-columns:1fr;
+  }
+
+  .mood-text{
+    text-align:center;
+  }
+
+  .mood-text p{
+    margin:auto;
+  }
 }
 
-@media(max-width:680px){
+@media(max-width:700px){
 
-    .container{
-        width:min(100% - 24px, 1120px);
-    }
+  .container{
+    width:min(100% - 24px, 1120px);
+  }
 
-    nav{
-        justify-content:center;
-        padding:22px 0;
-    }
+  nav{
+    justify-content:center;
+    padding:22px 0;
+  }
 
-    .menu{
-        display:none;
-    }
+  .menu{
+    display:none;
+  }
 
-    .logo{
-        font-size:1rem;
-    }
+  .logo{
+    font-size:1rem;
+  }
 
-    .hero{
-        gap:32px;
-        padding-bottom:44px;
-    }
+  .hero{
+    padding:24px 0 50px;
+  }
 
-    .hero h1{
-        font-size:clamp(3rem, 16vw, 4.4rem);
-    }
+  .hero h1{
+    font-size:clamp(3.2rem, 17vw, 4.8rem);
+  }
 
-    .hero p{
-        font-size:1rem;
-    }
+  .actions{
+    width:100%;
+  }
 
-    .actions{
-        width:100%;
-    }
+  .btn{
+    width:100%;
+  }
 
-    .btn{
-        width:100%;
-    }
+  .photo-stack{
+    min-height:430px;
+  }
 
-    .visual{
-        min-height:380px;
-        border-radius:30px;
-    }
+  .photo-one{
+    width:78%;
+    height:300px;
+  }
 
-    .date-card{
-        top:16px;
-        left:16px;
-        padding:16px 18px;
-        border-radius:22px;
-    }
+  .photo-two{
+    width:62%;
+    height:230px;
+    bottom:44px;
+  }
 
-    .date-card strong{
-        font-size:2rem;
-    }
+  .photo-three{
+    width:48%;
+    height:185px;
+  }
 
-    .house-card{
-        left:14px;
-        right:14px;
-        bottom:14px;
-        padding:18px;
-        border-radius:22px;
-    }
+  .memory-strip{
+    grid-template-columns:1fr;
+  }
 
-    .section{
-        padding:54px 0;
-    }
+  .section{
+    padding:58px 0;
+  }
 
-    .story,
-    .detail-box,
-    .response{
-        border-radius:26px;
-        padding:28px;
-    }
+  .story-title,
+  .story-text,
+  .response{
+    border-radius:28px;
+    padding:32px 26px;
+  }
 
-    .response{
-        padding:38px 24px;
-    }
+  .quote{
+    padding:34px 10px;
+  }
 
-    footer{
-        padding:42px 20px;
-    }
+  .mood-cloud{
+    justify-content:flex-start;
+  }
+
+  .chip{
+    width:100%;
+    text-align:center;
+  }
 }
 
-@media(max-width:420px){
+@media(max-width:430px){
 
-    .badge{
-        font-size:.78rem;
-        padding:9px 14px;
-    }
+  .badge{
+    font-size:.78rem;
+    padding:9px 14px;
+  }
 
-    .hero h1{
-        letter-spacing:-.055em;
-    }
+  .hero p{
+    font-size:1rem;
+  }
 
-    .visual{
-        min-height:340px;
-    }
+  .photo-stack{
+    min-height:380px;
+  }
 
-    .info-pill{
-        padding:20px;
-    }
+  .photo-one{
+    height:260px;
+  }
 
-    .section-title{
-        margin-bottom:28px;
-    }
+  .photo-two{
+    height:205px;
+  }
+
+  .photo-three{
+    height:160px;
+  }
+
+  .memory-item{
+    padding:20px;
+  }
+
+  .response{
+    padding:34px 22px;
+  }
 }
 </style>
 </head>
@@ -600,176 +671,185 @@ footer strong{
 
 <div class="container">
 
-    <nav>
-        <div class="logo">
-            <span class="logo-dot"></span>
-            Crémaillère à Angoulême
+  <nav>
+    <div class="logo">
+      <span class="logo-mark"></span>
+      Crémaillère à Angoulême
+    </div>
+
+    <div class="menu">
+      <a href="#histoire">L’histoire</a>
+      <a href="#ambiance">L’ambiance</a>
+      <a href="#reponse">Répondre</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="hero">
+
+      <div class="hero-text">
+
+        <div class="badge">
+          ✨ Samedi 5 septembre 2026
         </div>
 
-        <div class="menu">
-            #infosInfos</a>
-            #reponseRépondre</a>
+        <h1>
+          On ouvre enfin la maison.
+        </h1>
+
+        <p>
+          Après les cartons, les travaux, les allers-retours et les cafés bus debout,
+          il ne manque plus qu’une chose pour que cette maison devienne vraiment la nôtre :
+          la remplir des gens qu’on aime.
+        </p>
+
+        <div class="actions">
+          <a class="btn btn-primary" href="TON_LIEN_GOOGLE_FORM" target="_blank" rel="noopener">
+            Je réponds à l’invitation
+          </a>
+
+          <a class="btn btn-secondary" href="#histoire">
+            Découvrir l’invitation
+          </a>
         </div>
-    </nav>
 
-    <main>
+      </div>
 
-        <section class="hero">
+      <div class="photo-stack" aria-label="Photos d'ambiance de la maison">
 
-            <div class="hero-text">
+        <div class="blob blob-green"></div>
+        <div class="blob blob-taupe"></div>
 
-                <div class="badge">
-                    ✨ Samedi 5 septembre 2026
-                </div>
+        <div class="polaroid photo-one" data-caption="la maison">
+          <img src="images/jardin.jpg" alt="Jardin de la maison">
+        </div>
 
-                <h1>
-                    On pend la crémaillère !
-                </h1>
+        <div class="polaroid photo-two" data-caption="le jardin">
+          <img src="images/jardin.jpg" alt="Ambiance jardin">
+        </div>
 
-                <p>
-                    Venez célébrer notre installation à Angoulême autour d’un déjeuner,
-                    d’un apéritif dans le jardin et d’un moment simple, joyeux et convivial.
-                </p>
+        <div class="polaroid photo-three" data-caption="la fête">
+          <img src="images/jardin.jpg" alt="Ambiance crémaillère">
+        </div>
 
-                <div class="actions">
-                    TON_LIEN_GOOGLE_FORM
-                        Répondre à l’invitation
-                    </a>
+      </div>
 
-                    #infos
-                        Voir les infos pratiques
-                    </a>
-                </div>
+    </section>
 
-            </div>
+    <section class="memory-strip" aria-label="Résumé de l'esprit de la journée">
 
-            <div class="visual">
+      <div class="memory-item">
+        <strong>1</strong>
+        <span>maison à inaugurer</span>
+      </div>
 
-                <div class="date-card">
-                    <span>Septembre</span>
-                    <strong>05</strong>
-                    <span>à partir de 12h</span>
-                </div>
+      <div class="memory-item">
+        <strong>∞</strong>
+        <span>verres à lever</span>
+      </div>
 
-                <div class="house-card">
-                    <strong>Direction Angoulême 🏡</strong>
-                    <p>
-                        Une journée pour découvrir la maison, profiter du jardin
-                        et se retrouver autour d’un bon repas.
-                    </p>
-                </div>
+      <div class="memory-item">
+        <strong>12h</strong>
+        <span>début des festivités</span>
+      </div>
 
-            </div>
+      <div class="memory-item">
+        <strong>31/07</strong>
+        <span>réponse souhaitée</span>
+      </div>
 
-        </section>
+    </section>
 
-        <section class="quick-info" aria-label="Résumé des informations">
+    <section id="histoire" class="section">
 
-            <div class="info-pill">
-                <div class="emoji">📅</div>
-                <strong>Quand ?</strong>
-                <span>Samedi 5 septembre 2026</span>
-            </div>
+      <div class="story-card">
 
-            <div class="info-pill">
-                <div class="emoji">📍</div>
-                <strong>Où ?</strong>
-                <span>À Angoulême</span>
-            </div>
+        <div class="story-title">
+          <h2>
+            Une nouvelle aventure commence.
+          </h2>
+        </div>
 
-            <div class="info-pill">
-                <div class="emoji">💌</div>
-                <strong>Réponse</strong>
-                <span>Souhaitée avant le 31 juillet</span>
-            </div>
+        <div class="story-text">
 
-        </section>
+          <p>
+            On avait envie d’une invitation qui ressemble à cette journée :
+            simple, chaleureuse, un peu joyeuse, et surtout entourée des bonnes personnes.
+          </p>
 
-        <section id="infos" class="section">
+          <p>
+            L’idée est de se retrouver tranquillement à Angoulême, de profiter du jardin,
+            de partager un repas, de rire, de visiter la maison et de célébrer cette nouvelle étape.
+          </p>
 
-            <h2 class="section-title">
-                Les infos pratiques
-            </h2>
+        </div>
 
-            <div class="invite-card">
+      </div>
 
-                <div class="story">
+    </section>
 
-                    <h2>
-                        Une journée simple, festive et à la maison.
-                    </h2>
+    <section class="quote">
 
-                    <p>
-                        On prévoit un moment convivial à partir de midi :
-                        de quoi manger, boire, discuter, visiter la maison
-                        et profiter tranquillement de la fin de l’été ensemble.
-                    </p>
+      <p>
+        Il ne manque 
+          <p>
+            Juste une journée de fin d’été comme on les aime :
+            un jardin, des discussions qui durent, quelque chose à grignoter,
+            des verres qui s’entrechoquent et la maison qui prend vie.
+          </p>
 
-                </div>
+        </div>
 
-                <div class="details">
+        <div class="mood-cloud" aria-label="Ambiance de la crémaillère">
 
-                    <div class="detail-box">
-                        <h3>📅 Date & horaire</h3>
-                        <p>
-                            Samedi 5 septembre 2026, à partir de 12h.
-                        </p>
-                    </div>
+          <div class="chip">🌿 jardin</div>
+          <div class="chip">🍷 apéro</div>
+          <div class="chip">🏡 visite de la maison</div>
+          <div class="chip">🍽️ déjeuner</div>
+          <div class="chip">☀️ fin d’été</div>
+          <div class="chip">❤️ retrouvailles</div>
+          <div class="chip">🎶 ambiance tranquille</div>
+          <div class="chip">🥂 crémaillère</div>
 
-                    <div class="detail-box">
-                        <h3>📍 Adresse</h3>
-                        <p>
-                            La crémaillère aura lieu à Angoulême.
-                            L’adresse complète sera envoyée aux personnes qui confirment leur venue.
-                        </p>
-                    </div>
+        </div>
 
-                    <div class="detail-box">
-                        <h3>🛏️ Pour dormir</h3>
-                        <p>
-                            Quelques couchages seront possibles sur place selon les disponibilités.
-                            Vous pourrez le préciser dans le formulaire.
-                        </p>
-                    </div>
+      </div>
 
-                </div>
+    </section>
 
-            </div>
+    <section id="reponse" class="section">
 
-        </section>
+      <div class="response">
 
-        <section id="reponse" class="section">
+        <div class="response-content">
 
-            <div class="response">
+          <h2>
+            Alors, vous venez ?
+          </h2>
 
-                <div class="response-content">
+          <p>
+            Pour nous aider à tout prévoir, merci de compléter le formulaire avant le 31 juillet.
+            L’adresse complète sera envoyée aux personnes qui confirment leur venue.
+          </p>
 
-                    <h2>
-                        Vous venez ? 🎉
-                    </h2>
+          TON_LIEN_GOOGLE_FORM
+            Accéder au Google Form
+          </a>
 
-                    <p>
-                        Merci de remplir le formulaire avant le 31 juillet pour nous aider
-                        à prévoir les repas, les quantités et les couchages.
-                    </p>
+        </div>
 
-                    TON_LIEN_GOOGLE_FORM
-                        Accéder au Google Form
-                    </a>
+      </div>
 
-                </div>
+    </section>
 
-            </div>
-
-        </section>
-
-    </main>
+  </main>
 
 </div>
 
 <footer>
-    <strong>Hâte de vous voir à Angoulême</strong>
-    <p>Crémaillère · Samedi 5 septembre 2026</p>
+  <strong>Hâte de vous voir à Angoulême ❤️</strong>
+  <p>Crémaillère · Samedi 5 septembre 2026</p>
 </footer>
 
 </body>
