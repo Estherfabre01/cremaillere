@@ -1,0 +1,78 @@
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: .8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.countdown {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.countdown-number {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #751616;
+}
+
+.rsvp-card {
+  text-align: center;
+}
+
+#backToTop {
+
+  position: fixed;
+
+  bottom: 30px;
+  right: 30px;
+
+  width: 55px;
+  height: 55px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #751616;
+  color: white;
+
+  font-size: 22px;
+
+  cursor: pointer;
+
+  opacity: 0;
+
+  transition: .3s;
+}
+
+#backToTop.show {
+  opacity: 1;
+}
+
+.confetti {
+
+  position: fixed;
+
+  width: 10px;
+  height: 10px;
+
+  pointer-events: none;
+
+  animation: fall 2s linear forwards;
+}
+
+@keyframes fall {
+
+  to {
+
+    transform:
+      translateY(100vh)
+      rotate(720deg);
+
+    opacity: 0;
+  }
+}

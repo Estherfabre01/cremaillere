@@ -1,479 +1,205 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Invitation à notre crémaillère à Angoulême le samedi 5 septembre 2026." />
-  <title>Crémaillère à Angoulême — 5 septembre 2026</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crémaillère à Angoulême</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bordeaux: #7B233B;
-      --bordeaux-dark:#751616 ;
-      --green: #1C4717;
-      --green-dark: #1C4717;
-      --cream: #F7F0DF;
-      --cream-2: #FFF9ED;
-      --beige: #E8D9BF;
-      --ink: #2E2326;
-      --muted: #725F63;
-      --white: #FFFFFF;
-      --shadow: 0 24px 70px rgba(84, 22, 39, .14);
-      --radius-xl: 28px;
-      --radius-lg: 20px;
-    }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--ink);
-      background:
-        radial-gradient(circle at top left, rgba(111, 209, 63, .22), transparent 32rem),
-        radial-gradient(circle at 85% 10%, rgba(123, 35, 59, .16), transparent 28rem),
-        linear-gradient(135deg, var(--cream), var(--cream-2));
-      min-height: 100vh;
-    }
-
-    a { color: inherit; }
-    .page { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 22px 0;
-    }
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 800;
-      color: var(--bordeaux);
-      letter-spacing: -.02em;
-    }
-    .brand-dot {
-      width: 16px; height: 16px;
-      border-radius: 999px;
-      background: var(--green);
-      box-shadow: 0 0 0 7px rgba(111, 209, 63, .22);
-    }
-    .nav-links { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
-    .nav-links a {
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--bordeaux);
-      background: rgba(255, 255, 255, .58);
-      border: 1px solid rgba(123, 35, 59, .10);
-      padding: 10px 14px;
-      border-radius: 999px;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 34px;
-      align-items: center;
-      padding: 34px 0 56px;
-    }
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      width: fit-content;
-      padding: 9px 13px;
-      background: var(--bordeaux);
-      color: var(--cream-2);
-      border-radius: 999px;
-      font-size: 14px;
-      font-weight: 800;
-      box-shadow: 0 12px 30px rgba(123, 35, 59, .22);
-    }
-    h1 {
-      margin: 18px 0 16px;
-      color: var(--bordeaux);
-      font-size: clamp(42px, 8vw, 82px);
-      line-height: .92;
-      letter-spacing: -.07em;
-    }
-    .lead {
-      margin: 0 0 26px;
-      color: var(--muted);
-      font-size: clamp(17px, 2.4vw, 22px);
-      line-height: 1.48;
-      max-width: 690px;
-    }
-    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      min-height: 48px;
-      padding: 14px 19px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 800;
-      border: 2px solid transparent;
-      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
-      cursor: pointer;
-    }
-    .button:hover { transform: translateY(-2px); }
-    .button-primary {
-      color: var(--cream-2);
-      background: linear-gradient(135deg, var(--bordeaux), var(--bordeaux-dark));
-      box-shadow: 0 18px 35px rgba(123, 35, 59, .22);
-    }
-    .button-secondary {
-      color: var(--bordeaux);
-      background: rgba(255, 255, 255, .68);
-      border-color: rgba(123, 35, 59, .16);
-    }
-    .deadline-pill {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      width: fit-content;
-      margin-top: 20px;
-      padding: 13px 15px;
-      border-radius: 18px;
-      background: rgba(111, 209, 63, .20);
-      color: var(--bordeaux-dark);
-      font-weight: 800;
-      border: 1px solid rgba(63, 142, 34, .18);
-    }
-
-    .hero-card {
-      position: relative;
-      min-height: 520px;
-      border-radius: 38px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      background: var(--bordeaux);
-      isolation: isolate;
-    }
-    .hero-card::before {
-      content: "";
-      position: absolute; inset: 0;
-      background:
-        linear-gradient(to bottom, rgba(0,0,0,.05), rgba(84,22,39,.76)),
-        url("images/jardin.jpg") center/cover no-repeat;
-      z-index: -2;
-    }
-    .hero-card::after {
-      content: "";
-      position: absolute;
-      width: 260px; height: 260px;
-      right: -70px; top: -70px;
-      background: var(--green);
-      border-radius: 45% 55% 54% 46% / 40% 46% 54% 60%;
-      opacity: .86;
-      z-index: -1;
-    }
-    .photo-note {
-      position: absolute;
-      left: 22px; right: 22px; bottom: 22px;
-      display: grid;
-      gap: 12px;
-      padding: 18px;
-      color: var(--cream-2);
-      background: rgba(84, 22, 39, .72);
-      backdrop-filter: blur(14px);
-      border: 1px solid rgba(255, 255, 255, .20);
-      border-radius: 24px;
-    }
-    .photo-note strong { font-size: 22px; }
-    .photo-note span { color: rgba(255, 249, 237, .88); line-height: 1.4; }
-
-    .section { padding: 44px 0; }
-    .section-title {
-      margin: 0 0 18px;
-      color: var(--bordeaux);
-      font-size: clamp(30px, 5vw, 48px);
-      line-height: 1;
-      letter-spacing: -.045em;
-    }
-    .grid { display: grid; gap: 16px; }
-    .grid-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid-2 { grid-template-columns: repeat(2, 1fr); }
-    .card {
-      background: rgba(255, 255, 255, .74);
-      border: 1px solid rgba(123, 35, 59, .10);
-      border-radius: var(--radius-xl);
-      box-shadow: 0 18px 56px rgba(84, 22, 39, .09);
-      padding: 24px;
-    }
-    .info-card strong, .program-card strong { color: var(--bordeaux); display: block; font-size: 20px; margin-bottom: 5px; }
-    .info-card span, .program-card span { color: var(--muted); line-height: 1.45; }
-    .icon {
-      width: 44px; height: 44px;
-      display: grid; place-items: center;
-      border-radius: 16px;
-      background: var(--green);
-      color: var(--bordeaux-dark);
-      font-size: 22px;
-      margin-bottom: 14px;
-    }
-
-    .highlight {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 18px;
-      align-items: center;
-      background: linear-gradient(135deg, var(--green), #9AEA68);
-      border-radius: 30px;
-      padding: 24px;
-      color: var(--bordeaux-dark);
-      box-shadow: 0 20px 55px rgba(63, 142, 34, .18);
-    }
-    .highlight p { margin: 6px 0 0; color: rgba(84, 22, 39, .82); line-height: 1.45; }
-    .highlight-badge {
-      background: var(--bordeaux);
-      color: var(--cream-2);
-      border-radius: 22px;
-      padding: 16px 18px;
-      font-weight: 800;
-      text-align: center;
-      min-width: 150px;
-    }
-    .highlight-badge small { display: block; opacity: .85; font-weight: 700; }
-
-    form { display: grid; gap: 18px; }
-    label { font-weight: 800; color: var(--bordeaux); display: block; margin-bottom: 8px; }
-    input, select, textarea {
-      width: 100%;
-      border: 2px solid rgba(123, 35, 59, .13);
-      background: var(--cream-2);
-      border-radius: 18px;
-      padding: 14px 15px;
-      font: inherit;
-      color: var(--ink);
-      outline: none;
-    }
-    textarea { resize: vertical; min-height: 104px; }
-    input:focus, select:focus, textarea:focus {
-      border-color: var(--green-dark);
-      box-shadow: 0 0 0 4px rgba(111, 209, 63, .18);
-    }
-    .help { color: var(--muted); font-size: 14px; margin-top: 7px; line-height: 1.35; }
-
-    .radio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-    .radio-option { position: relative; margin: 0; }
-    .radio-option input { position: absolute; opacity: 0; pointer-events: none; }
-    .radio-option span {
-      min-height: 58px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 12px;
-      border-radius: 18px;
-      border: 2px solid rgba(123, 35, 59, .12);
-      background: var(--cream-2);
-      color: var(--bordeaux);
-      font-weight: 800;
-      cursor: pointer;
-      transition: .18s ease;
-    }
-    .radio-option input:checked + span {
-      background: var(--bordeaux);
-      border-color: var(--bordeaux);
-      color: var(--cream-2);
-      box-shadow: 0 14px 28px rgba(123, 35, 59, .20);
-      transform: translateY(-2px);
-    }
-
-    .footer {
-      padding: 38px 0 52px;
-      text-align: center;
-      color: var(--muted);
-    }
-    .footer strong { color: var(--bordeaux); }
-
-    @media (max-width: 840px) {
-      .nav { align-items: flex-start; }
-      .nav-links { display: none; }
-      .hero { grid-template-columns: 1fr; padding-top: 18px; }
-      .hero-card { min-height: 430px; }
-      .grid-3, .grid-2 { grid-template-columns: 1fr; }
-      .highlight { grid-template-columns: 1fr; }
-      .highlight-badge { width: fit-content; }
-      .radio-grid { grid-template-columns: 1fr; }
-    }
-
-    @media (max-width: 520px) {
-      .page { width: min(100% - 22px, 1120px); }
-      .card, .highlight { padding: 18px; border-radius: 24px; }
-      .hero-card { min-height: 390px; border-radius: 28px; }
-      .photo-note { left: 14px; right: 14px; bottom: 14px; }
-      .cta-row .button { width: 100%; }
-      h1 { letter-spacing: -.055em; }
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <div class="page">
-    <nav class="nav" aria-label="Navigation principale">
-      <div class="brand"><span class="brand-dot"></span> Crémaillère à Angoulême</div>
-      <div class="nav-links">
-        <a href="#infos">Infos</a>
-        <a href="#programme">Programme</a>
-        <a href="#rsvp">Répondre</a>
+
+<div class="page">
+
+  <nav class="nav">
+    <div class="brand">
+      <span class="brand-dot"></span>
+      Crémaillère à Angoulême
+    </div>
+
+    <div class="nav-links">
+      <a href="#infos">Infos</a>
+      <a href="#programme">Programme</a>
+      <a href="#rsvp">Répondre</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="hero">
+
+      <div>
+
+        <div class="eyebrow">
+          Invitation · samedi 5 septembre 2026
+        </div>
+
+        <h1>
+          On pend la crémaillère !
+        </h1>
+
+        <p class="lead">
+          Déjeuner, jardin, visite de la maison et fin d’été ensemble :
+          venez célébrer notre installation à Angoulême avec nous.
+        </p>
+
+        <div class="cta-row">
+
+          <a class="button button-primary confetti-btn"
+             href="#rsvp">
+            Répondre
+          </a>
+
+          <a class="button button-secondary"
+             href="#infos">
+            Infos pratiques
+          </a>
+
+        </div>
+
+        <div class="deadline-pill">
+          📅 Réponse souhaitée avant le 31 juillet
+        </div>
+
       </div>
-    </nav>
 
-    <main>
-      <section class="hero">
-        <div>
-          <div class="eyebrow">Invitation · samedi 5 septembre 2026</div>
-          <h1>On pend la crémaillère&nbsp;!</h1>
-          <p class="lead">
-            Déjeuner, jardin, visite de la maison et fin d’été ensemble : venez célébrer notre installation à Angoulême avec nous.
-          </p>
-          <div class="cta-row">
-            <a class="button button-primary" href="#rsvp">Je réponds à l’invitation</a>
-            <a class="button button-secondary" href="#infos">Voir les infos pratiques</a>
-          </div>
-          <div class="deadline-pill">📅 Réponse souhaitée avant le 31 juillet</div>
+      <aside class="hero-card">
+
+        <div class="photo-note">
+
+          <strong>
+            À partir de 12h
+          </strong>
+
+          <span>
+            Une journée conviviale autour d’un déjeuner,
+            du jardin et de la découverte de notre maison.
+          </span>
+
         </div>
 
-        <aside class="hero-card" aria-label="Photo d'ambiance jardin maison">
-          <div class="photo-note">
-            <strong>À partir de 12h</strong>
-            <span>On prévoit une journée simple et conviviale dans le jardin, avec de quoi manger, boire, papoter et profiter.</span>
-          </div>
-        </aside>
-      </section>
+      </aside>
 
-      <section id="infos" class="section" aria-labelledby="infos-title">
-        <h2 id="infos-title" class="section-title">Les infos pratiques</h2>
-        <div class="grid grid-3">
-          <article class="card info-card">
-            <div class="icon">📅</div>
-            <strong>Quand ?</strong>
-            <span>Samedi 5 septembre 2026, à partir de 12h.</span>
-          </article>
-          <article class="card info-card">
-            <div class="icon">📍</div>
-            <strong>Où ?</strong>
-            <span>À Angoulême. L’adresse complète sera partagée aux personnes qui confirment leur venue.</span>
-          </article>
-          <article class="card info-card">
-            <div class="icon">🛏️</div>
-            <strong>Pour la nuit</strong>
-            <span>Possibilité de dormir sur place selon les couchages disponibles. Dis-nous ce qui t’arrange dans le formulaire.</span>
-          </article>
-        </div>
-      </section>
+    </section>
 
-      <section id="programme" class="section" aria-labelledby="programme-title">
-        <h2 id="programme-title" class="section-title">Au programme</h2>
-        <div class="grid grid-2">
-          <article class="card program-card">
-            <div class="icon">🍽️</div>
-            <strong>Déjeuner & barbecue</strong>
-            <span>On se charge du repas : préviens-nous simplement en cas d’allergie ou de régime particulier.</span>
-          </article>
-          <article class="card program-card">
-            <div class="icon">🌿</div>
-            <strong>Jardin & visite de la maison</strong>
-            <span>Une journée tranquille pour profiter, discuter et faire découvrir la maison à ceux qui ne l’ont pas encore vue.</span>
-          </article>
-        </div>
-      </section>
+    <div class="countdown card">
+      <h3>Plus que</h3>
+      <div id="daysLeft" class="countdown-number">...</div>
+      <p>jours avant la crémaillère 🎉</p>
+    </div>
 
-      <section class="section">
-        <div class="highlight">
-          <div>
-            <h2 class="section-title" style="margin-bottom:8px; color: var(--bordeaux-dark);">Merci de répondre avant fin juillet</h2>
-            <p>Ça nous permettra d’anticiper les repas, les quantités et les couchages pour accueillir tout le monde dans les meilleures conditions.</p>
-          </div>
-          <div class="highlight-badge"><small>Date limite</small>31 juillet</div>
-        </div>
-      </section>
+    <section id="infos" class="section">
 
-      <section id="rsvp" class="section" aria-labelledby="rsvp-title">
-        <div class="card">
-          <h2 id="rsvp-title" class="section-title">Dis-nous si tu viens 🎉</h2>
-          <p class="lead" style="font-size:18px; margin-bottom:22px;">Remplis le formulaire ci-dessous. Tu peux remplacer l’action du formulaire par ton lien Google Forms / Formspree pour collecter les réponses automatiquement.</p>
+      <h2 class="section-title">
+        Les infos pratiques
+      </h2>
 
-          <!-- OPTION SIMPLE : remplace FORM_ACTION_ICI par ton lien Google Forms ou Formspree -->
-          <form action="FORM_ACTION_ICI" method="POST">
-            <div class="grid grid-2">
-              <div>
-                <label for="prenom">Ton prénom</label>
-                <input id="prenom" name="prenom" type="text" autocomplete="given-name" required placeholder="Ex. Camille" />
-              </div>
-              <div>
-                <label for="participants">Combien serez-vous ?</label>
-                <select id="participants" name="participants" required>
-                  <option value="" selected disabled>Choisir une option</option>
-                  <option>1 adulte</option>
-                  <option>2 adultes</option>
-                  <option>2 adultes + enfant(s)</option>
-                  <option>Autre / à préciser dans le message</option>
-                </select>
-              </div>
-            </div>
+      <div class="grid grid-3">
 
-            <div>
-              <label>Peux-tu venir ?</label>
-              <div class="radio-grid" role="radiogroup" aria-label="Présence">
-                <label class="radio-option"><input type="radio" name="presence" value="Oui" required><span>Oui, je viens</span></label>
-                <label class="radio-option"><input type="radio" name="presence" value="Non"><span>Non, désolé</span></label>
-                <label class="radio-option"><input type="radio" name="presence" value="Je ne sais pas encore"><span>Je ne sais pas encore</span></label>
-              </div>
-            </div>
+        <article class="card info-card">
+          <div class="icon">📅</div>
+          <strong>Quand ?</strong>
+          <span>Samedi 5 septembre 2026 à partir de 12h.</span>
+        </article>
 
-            <div class="grid grid-2">
-              <div>
-                <label for="arrivee">Heure d’arrivée estimée</label>
-                <select id="arrivee" name="arrivee">
-                  <option value="" selected>Je ne sais pas encore</option>
-                  <option>Avant 12h</option>
-                  <option>Entre 12h et 14h</option>
-                  <option>Après 14h</option>
-                  <option>Je passerai plus tard dans la journée</option>
-                </select>
-              </div>
-              <div>
-                <label for="nuit">Pour la nuit</label>
-                <select id="nuit" name="nuit">
-                  <option value="" selected>Choisir une option</option>
-                  <option>J’aimerais dormir sur place</option>
-                  <option>Je prévois un hôtel</option>
-                  <option>Je repars le soir</option>
-                  <option>Je ne sais pas encore</option>
-                </select>
-              </div>
-            </div>
+        <article class="card info-card">
+          <div class="icon">📍</div>
+          <strong>Où ?</strong>
+          <span>
+            À Angoulême. L'adresse sera envoyée aux participants.
+          </span>
+        </article>
 
-            <div>
-              <label for="allergies">Allergies ou régime alimentaire</label>
-              <input id="allergies" name="allergies" type="text" placeholder="Ex. végétarien, sans gluten, allergie aux fruits à coque…" />
-            </div>
+        <article class="card info-card">
+          <div class="icon">🛏️</div>
+          <strong>Pour la nuit</strong>
+          <span>
+            Possibilité de dormir sur place selon les disponibilités.
+          </span>
+        </article>
 
-            <div>
-              <label for="message">Un petit mot</label>
-              <textarea id="message" name="message" placeholder="Une précision, une question, une chanson à demander ?"></textarea>
-              <p class="help">Si vous venez à plusieurs, tu peux préciser les prénoms ici.</p>
-            </div>
+      </div>
 
-            <button class="button button-primary" type="submit">Envoyer ma réponse</button>
-          </form>
-        </div>
-      </section>
-    </main>
+    </section>
 
-    <footer class="footer">
-      <strong>Hâte de vous voir à Angoulême ❤️</strong><br>
-      Pensez à répondre avant le 31 juillet.
-    </footer>
-  </div>
+    <section id="programme" class="section">
+
+      <h2 class="section-title">
+        Au programme
+      </h2>
+
+      <div class="grid grid-2">
+
+        <article class="card program-card">
+          <div class="icon">🍽️</div>
+          <strong>Déjeuner & barbecue</strong>
+          <span>
+            On se charge du repas.
+          </span>
+        </article>
+
+        <article class="card program-card">
+          <div class="icon">🌿</div>
+          <strong>Jardin & visite</strong>
+          <span>
+            Une journée tranquille pour profiter ensemble.
+          </span>
+        </article>
+
+      </div>
+
+    </section>
+
+    <section id="rsvp" class="section">
+
+      <div class="card rsvp-card">
+
+        <h2 class="section-title">
+          Répondre à l'invitation 🎉
+        </h2>
+
+        <p class="lead">
+          Merci de compléter le formulaire avant le 31 juillet.
+        </p>
+
+        <a
+          class="button button-primary confetti-btn"
+          target="_blank"
+          href="TON_LIEN_GOOGLE_FORM">
+
+          Remplir le formulaire
+
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+
+    <strong>Hâte de vous voir à Angoulême ❤️</strong>
+
+    <br>
+
+    Pensez à répondre avant le 31 juillet.
+
+  </footer>
+
+</div>
+
+<button id="backToTop">
+  ↑
+</button>
+
+<script src="js/main.js"></script>
+
 </body>
 </html>
